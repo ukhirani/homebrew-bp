@@ -5,24 +5,48 @@
 class Bp < Formula
   desc "Skip writing repetitive boilerplate code"
   homepage "https://github.com/ukhirani/boilerplate"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
-  depends_on :macos
 
-  on_intel do
-    url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.2/bp_darwin_amd64.tar.gz"
-    sha256 "36f2de62178f5992604dd45cbf4f502ac624212a74639f6d204b9cfa34f3df40"
+  on_macos do
+    on_intel do
+      url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.3/bp_darwin_amd64.tar.gz"
+      sha256 "ab57a1e96b75c0a29a34c8f577b27d2b2310cb5bfe40f4a0e510418d5989dc3f"
 
-    def install
-      bin.install "bp"
+      def install
+        bin.install "bp"
+      end
+    end
+    on_arm do
+      url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.3/bp_darwin_arm64.tar.gz"
+      sha256 "651272ded867c1bc2a53d252018db5ac1a06ab9a61b54fd5265e86685e9809f1"
+
+      def install
+        bin.install "bp"
+      end
     end
   end
-  on_arm do
-    url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.2/bp_darwin_arm64.tar.gz"
-    sha256 "4ba201997ee453a0874712a617817566e83eaf3eb8c10b0350d9cb1f5474b17f"
 
-    def install
-      bin.install "bp"
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.3/bp_linux_amd64.tar.gz"
+        sha256 "4f6e9b471877b5ef282186372a7e1f034b2955a7ae5542c03b827d68f435f00e"
+
+        def install
+          bin.install "bp"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.3/bp_linux_arm64.tar.gz"
+        sha256 "b567adff813254e45d029254a0b5c7130aa11d1f8df51b597e36a9983fc5f621"
+
+        def install
+          bin.install "bp"
+        end
+      end
     end
   end
 end
