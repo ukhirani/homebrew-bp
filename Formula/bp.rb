@@ -5,21 +5,21 @@
 class Bp < Formula
   desc "Skip writing repetitive boilerplate code"
   homepage "https://github.com/ukhirani/boilerplate"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.7/bp_darwin_amd64.tar.gz"
-      sha256 "5fc8459409429ad6ab2ad99d3a25fc0cbc8671ee918127ce969cc0254d4963e4"
+      url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.8/bp_darwin_amd64.tar.gz"
+      sha256 "e2e306bacdc96123ede05c130737bd02217f15ac34fc44a5fdf8b6495b1482d6"
 
       def install
         bin.install "bp"
       end
     end
     on_arm do
-      url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.7/bp_darwin_arm64.tar.gz"
-      sha256 "13880fb659e5bb3a95f990699e85811fcc82e1ad7cfd56361d1449f964b61313"
+      url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.8/bp_darwin_arm64.tar.gz"
+      sha256 "5f20e070fafb911d94b0efb0c8349f24e0938bdc2a8a625219ece3550de0d104"
 
       def install
         bin.install "bp"
@@ -30,8 +30,8 @@ class Bp < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.7/bp_linux_amd64.tar.gz"
-        sha256 "1ea62393c71a7984dd47a02fcc52179d159d38d02d891292d37f0a91175d452c"
+        url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.8/bp_linux_amd64.tar.gz"
+        sha256 "317236e1dfe735f09b06f042ecf7e4ab7b84073ca04fad4e5d2f2b56e1320806"
 
         def install
           bin.install "bp"
@@ -40,8 +40,8 @@ class Bp < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.7/bp_linux_arm64.tar.gz"
-        sha256 "4728203c01111bb3219191406272ee8a0c74d70fd4c9b9a8603dd0c732beb379"
+        url "https://github.com/ukhirani/boilerplate/releases/download/v0.1.8/bp_linux_arm64.tar.gz"
+        sha256 "b664ea9413879031000d996998679ba9132cde6f20658df1c0bd136f808f5757"
 
         def install
           bin.install "bp"
